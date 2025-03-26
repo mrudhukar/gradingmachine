@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Codes and Weighing Machines</title>
+    <title>Weighing Machine Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <h1>Grading Machine Dashboard</h1>
+    </header>
+    
     <div class="container">
         <div class="qr-section">
             <div class="qr-container">
@@ -17,69 +21,123 @@
                     <div id="qrcode2"></div>
                     <p>Scan for Machine Details</p>
                 </div>
-                <div class="status-indicator">
-                    <h3>Input Status</h3>
-                    <div id="input-status" class="indicator red">Started</div>
-                </div>
-                <div class="status-indicator">
-                    <h3>Output Status</h3>
-                    <div id="output-status" class="indicator red">In Progress</div>
+                <div class="qr-code">
+                    <div class="control-panel">
+                        <button id="start-button" class="control-button start">Start</button>
+                    </div>
+                    <div class="status-indicator">
+                        <h3>Inputflow</h3>
+                        <div id="input-status" class="indicator green">Not Started</div>
+                    </div>
+                    <div class="status-indicator">
+                        <h3>Outflow</h3>
+                        <div id="output-status" class="indicator green">Not Started</div>
+                    </div>
                 </div>
                 <div class="qr-code">
                     <h3>Token Number</h3>
                     <div id="qrcode1"></div>
                     <p>Scan for Token Information</p>
                 </div>
-
             </div>
         </div>
-
+        
         <div class="weighing-section">
-            <div class="weighing-container">
+            <h2>Weighing Machines</h2>
+            <div class="weighing-machines">
                 <div class="weighing-machine">
                     <h3>Outlet 1</h3>
-                    <div class="display">0.00 kg</div>
+                    <div class="display">0.000</div>
                     <div class="status">Status: <span class="in-progress">In Progress</span></div>
+                    <div class="counter-info">
+                        <div class="count">Count: <span>0</span></div>
+                        <div class="total-weight">Total: <span>0.000</span> kg</div>
+                    </div>
+                    <button class="done-button" disabled>Done</button>
                 </div>
                 <div class="weighing-machine">
                     <h3>Outlet 2</h3>
-                    <div class="display">0.00 kg</div>
+                    <div class="display">0.000</div>
                     <div class="status">Status: <span class="in-progress">In Progress</span></div>
+                    <div class="counter-info">
+                        <div class="count">Count: <span>0</span></div>
+                        <div class="total-weight">Total: <span>0.000</span> kg</div>
+                    </div>
+                    <button class="done-button" disabled>Done</button>
                 </div>
                 <div class="weighing-machine">
                     <h3>Outlet 3</h3>
-                    <div class="display">0.00 kg</div>
+                    <div class="display">0.000</div>
                     <div class="status">Status: <span class="in-progress">In Progress</span></div>
+                    <div class="counter-info">
+                        <div class="count">Count: <span>0</span></div>
+                        <div class="total-weight">Total: <span>0.000</span> kg</div>
+                    </div>
+                    <button class="done-button" disabled>Done</button>
                 </div>
                 <div class="weighing-machine">
                     <h3>Outlet 4</h3>
-                    <div class="display">0.00 kg</div>
+                    <div class="display">0.000</div>
                     <div class="status">Status: <span class="in-progress">In Progress</span></div>
+                    <div class="counter-info">
+                        <div class="count">Count: <span>0</span></div>
+                        <div class="total-weight">Total: <span>0.000</span> kg</div>
+                    </div>
+                    <button class="done-button" disabled>Done</button>
                 </div>
                 <div class="weighing-machine">
                     <h3>Outlet 5</h3>
-                    <div class="display">0.00 kg</div>
+                    <div class="display">0.000</div>
                     <div class="status">Status: <span class="in-progress">In Progress</span></div>
+                    <div class="counter-info">
+                        <div class="count">Count: <span>0</span></div>
+                        <div class="total-weight">Total: <span>0.000</span> kg</div>
+                    </div>
+                    <button class="done-button" disabled>Done</button>
                 </div>
                 <div class="weighing-machine">
                     <h3>Outlet 6</h3>
-                    <div class="display">0.00 kg</div>
+                    <div class="display">0.000</div>
                     <div class="status">Status: <span class="in-progress">In Progress</span></div>
+                    <div class="counter-info">
+                        <div class="count">Count: <span>0</span></div>
+                        <div class="total-weight">Total: <span>0.000</span> kg</div>
+                    </div>
+                    <button class="done-button" disabled>Done</button>
                 </div>
                 <div class="weighing-machine">
                     <h3>Outlet 7</h3>
-                    <div class="display">0.00 kg</div>
+                    <div class="display">0.000</div>
                     <div class="status">Status: <span class="in-progress">In Progress</span></div>
+                    <div class="counter-info">
+                        <div class="count">Count: <span>0</span></div>
+                        <div class="total-weight">Total: <span>0.000</span> kg</div>
+                    </div>
+                    <button class="done-button" disabled>Done</button>
                 </div>
                 <div class="weighing-machine">
                     <h3>Outlet 8</h3>
-                    <div class="display">0.00 kg</div>
+                    <div class="display">0.000</div>
                     <div class="status">Status: <span class="in-progress">In Progress</span></div>
+                    <div class="counter-info">
+                        <div class="count">Count: <span>0</span></div>
+                        <div class="total-weight">Total: <span>0.000</span> kg</div>
+                    </div>
+                    <button class="done-button" disabled>Done</button>
                 </div>
             </div>
         </div>
     </div>
-
+    
+    <div id="token-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Enter Token</h3>
+            <input type="text" id="token-input" placeholder="Enter token number">
+            <button id="submit-token">Submit</button>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
